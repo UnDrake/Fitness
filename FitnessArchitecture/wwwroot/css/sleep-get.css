@@ -1,0 +1,24 @@
+#ic {
+    width: 300px;
+    padding: 20px;
+}
+
+.sleep {
+    background: none;
+    text-decoration: none;
+    border: 2px solid var(--main-color);
+    color: #00D4C6;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .4s;
+    margin-left: 105px;
+    cursor: pointer;
+}
+
+.btns label:hover {
+    background: var(--main-color);
+    color: #fff;
+}

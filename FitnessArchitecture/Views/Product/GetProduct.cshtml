@@ -1,0 +1,48 @@
+﻿@model ProductViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+<link rel="stylesheet" href="/css/product-exercise-get.css">
+
+
+
+<div class="form-box">
+    <label type="text" class="lbl-data">@Model.productName</label>
+
+    <div class="content">
+        <form asp-controller="Product" asp-action="Index" id="form" class="input-group">
+            <div class="column1">
+                <img src="@Model.productImg" alt="">
+            </div>
+
+
+            <div class="column2">
+                <div class="inputBox">
+                    <input disabled type="text" placeholder="@Model.productCalories">
+                    <span>Calories</span>
+                </div>
+                <div class="inputBox">
+                    <input disabled type="text" placeholder="@Model.productWeight">
+                    <span>Weight</span>
+                </div>
+                <div class="inputBox">
+                    <input disabled type="text" placeholder="@Model.productProteins">
+                    <span>Proteins</span>
+                </div>
+                <div class="inputBox">
+                    <input disabled type="text" placeholder="@Model.productFats">
+                    <span>Fats</span>
+                </div>
+                <div class="inputBox">
+                    <input disabled type="text" placeholder="@Model.productCarbs">
+                    <span>Carbs</span>
+                </div>
+            </div>
+
+            <button type="submit" class="back-btn">Back</button>
+        </form>
+
+    </div>
+</div>

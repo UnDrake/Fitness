@@ -1,0 +1,13 @@
+﻿@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/css/home-error.css">
+
+
+<div class="error">
+    <img src="~/images/account-error.png" alt="">
+    <h1>@ViewBag.StatusCode</h1>
+    <p>Oops! @ViewBag.Description!</p>
+    <a asp-controller="Account" asp-action="Login">Go back</a>
+</div>

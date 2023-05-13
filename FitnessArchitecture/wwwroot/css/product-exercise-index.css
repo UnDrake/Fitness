@@ -1,0 +1,37 @@
+#cart1 {
+    width: 200px;
+    padding: 20px;
+}
+
+#cart2 {
+    width: 200px;
+    padding: 20px;
+}
+
+.product1 {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.product2 {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.btns a {
+    background: none;
+    text-decoration: none;
+    border: 2px solid var(--main-color);
+    color: #00D4C6;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .4s;
+}
+
+.btns a:hover {
+    background: var(--main-color);
+    color: #fff;
+}

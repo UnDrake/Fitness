@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="~/css/mock.css">
+
+</head>
+
+
+<body>
+    <header class="header">
+        <section class="flex">
+            <div class="logo">
+                <a asp-area="" asp-controller="Home" asp-action="Index">FITNESS</a>
+            </div>
+
+            <nav class="navbar">
+                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a asp-area="" asp-controller="Sleep" asp-action="Index">Sleep</a>
+                <a asp-area="" asp-controller="Product" asp-action="Index">Nutrition</a>
+                <a asp-area="" asp-controller="Exercise" asp-action="Index">Workout</a>
+            </nav>
+        
+            <div class="icons">
+                <a asp-controller="User" asp-action="GetUser" class="fas fa-user" style="color:#fff; cursor: pointer; font-size: 2.5rem;
+                    margin-left: 2rem;" onmouseover="this.style.color='#00fceb';" onmouseout="this.style.color='#fff';"></a>
+                <a asp-controller="Account" asp-action="LogOut" class="fas fa-sign-out-alt" style="color:#fff; cursor: pointer; font-size: 2.5rem;
+                    margin-left: 2rem;" onmouseover="this.style.color='#00fceb';" onmouseout="this.style.color='#fff';"></a>
+            </div>
+            
+        </section>
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer class="footer">
+        <section class="footer-section">
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+                <a href="#" class="fab fa-telegram"></a>
+            </div>
+        
+            <div class="links">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <a href="#">About</a>
+                <a href="#">Privacy</a>
+                <a href="#">Support</a>
+                <a href="#">Contacts</a>
+            </div>    
+        </section>
+    </footer>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

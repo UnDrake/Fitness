@@ -1,0 +1,88 @@
+body {
+    background: #2059A8;
+}
+
+.form-box {
+    height: 500px;
+    width: 850px;
+    margin: 108px auto;
+    margin-bottom: 2.7rem;
+    background: #001b3e;
+    border-radius: 20px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+    .form-box .lbl-data {
+        margin: 20px auto;
+        margin-top: 50px;
+        font-size: 17px;
+        text-align: center;
+        width: 130px;
+        padding: 10px 20px;
+        display: block;
+        background: linear-gradient(to right, #78F0DE, #3094FF);
+        border: 0;
+        outline: none;
+        border-radius: 30px;
+    }
+
+    .form-box .content {
+        margin-top: 70px;
+        display: flex;
+    }
+
+        .form-box .content .input-group input ~ span,
+        .form-box .content .input-group select ~ span {
+            color: #00dfc4;
+            background: #001b3e;
+            transform: translateX(10px) translateY(-3px);
+            font-size: 0.85em;
+            padding: 0 10px;
+            border-left: 1px solid #00dfc4;
+            border-right: 1px solid #00dfc4;
+            letter-spacing: 0.2em;
+        }
+
+        .form-box .content .input-group .column {
+            margin-top: -60px;
+            width: 50%;
+            float: left;
+            margin-bottom: 60px;
+        }
+
+            .form-box .content .input-group .column .input-field {
+                position: relative;
+                width: 300px;
+                margin: 30px 50px 0 50px;
+            }
+
+                .form-box .content .input-group .column .input-field input, select {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid rgba(255, 255, 255, 0.25);
+                    background-color: #001b3e;
+                    border-radius: 5px;
+                    outline: none;
+                    color: #fff;
+                    font-size: 1.5em;
+                }
+
+
+                .form-box .content .input-group .column .input-field span {
+                    position: absolute;
+                    left: 0;
+                    text-transform: uppercase;
+                }
+
+        .form-box .content .input-group .save-btn {
+            margin: 30px auto 20px auto;
+            font-size: 14px;
+            text-align: center;
+            width: 140px;
+            padding: 8px 16px;
+            display: block;
+            background: linear-gradient(to right, #78F0DE, #3094FF);
+            border-radius: 30px;
+            cursor: pointer;
+        }

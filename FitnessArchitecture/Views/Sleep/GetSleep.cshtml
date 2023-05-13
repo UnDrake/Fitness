@@ -1,0 +1,53 @@
+﻿@model SleepViewModel
+
+<link rel="stylesheet" href="~/css/sleep-get.css">
+<link rel="stylesheet" href="~/css/sleep-update.css">
+<link rel="stylesheet" href="~/css/index.css">
+
+
+<div class="content">
+    <section class="index">
+        <div class="description">
+            <h3>Sleep</h3>
+            <p>
+                Sleep is an important part of a healthy lifestyle and fitness program. It plays a key 
+                role in the recovery and regeneration of the body after intense training, which helps 
+                to strengthen muscles and improve overall fitness. In addition, good sleep improves your mood, 
+                mental health, and promotes better learning and skills that can be important to achieving 
+                your fitness goals.
+            </p>
+        </div>
+        <div class="options">
+            <div class="icons">
+                <img id="ic" src="~/images/sleep-index.png">
+            </div>
+            <div class="btns">
+                <label for="chkBox" class="sleep">My sleep</label>
+            </div>
+        </div>
+    </section>
+</div> 
+
+
+<div class="form-box">
+    <input type="checkbox" id="chkBox">
+    <div class="form-content">
+        <form asp-controller="Sleep" asp-action="UpdateSleep" id="form" class="box">
+            <label type="text" class="lbl-data">Your sleep</label>
+            <span asp-validation-for="@Model.sleepTime" style="font-size:12px; color:red; margin-left:150px"></span>
+            <div class="login-form">
+                <div class="inputBox">
+                    <input asp-for="@Model.sleepTime" type="number" placeholder="Sleep Amount">
+                    @{
+                        Model.sleepAccountEmail = User.Identity.Name;
+                    }
+                    <span>Sleep Amount</span>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="save-btn">Update</button>
+                <label for="chkBox" class="close-btn">Close</label>
+            </div>
+        </form>
+    </div>
+</div>

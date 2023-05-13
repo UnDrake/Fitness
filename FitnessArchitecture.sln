@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessArchitecture", "FitnessArchitecture\FitnessArchitecture.csproj", "{BEC67E6B-8653-47FA-884C-EADD2942AED1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{9A3DF11A-23D7-4C43-AFB2-536B219B76CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessArchitecture.Domain", "FitnessArchitecture.Domain\FitnessArchitecture.Domain.csproj", "{22951339-A0B1-4D8B-9555-2A1E72EA1075}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{325979DE-2142-4422-8BF8-72BF0C035A75}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessArchitecture.DAL", "FitnessArchitecture.DAL\FitnessArchitecture.DAL.csproj", "{97FEA8FC-C806-4CE3-9D06-B9B7E8441F51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{311C3836-085E-49FC-940A-E00EFAB04F78}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{FE10F059-342A-4FCC-837A-A2A6E80A24E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessArchitecture.Service", "FitnessArchitecture.Service\FitnessArchitecture.Service.csproj", "{20535538-ADD6-4536-83B3-3EF809C83F57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEC67E6B-8653-47FA-884C-EADD2942AED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEC67E6B-8653-47FA-884C-EADD2942AED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEC67E6B-8653-47FA-884C-EADD2942AED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEC67E6B-8653-47FA-884C-EADD2942AED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22951339-A0B1-4D8B-9555-2A1E72EA1075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22951339-A0B1-4D8B-9555-2A1E72EA1075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22951339-A0B1-4D8B-9555-2A1E72EA1075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22951339-A0B1-4D8B-9555-2A1E72EA1075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97FEA8FC-C806-4CE3-9D06-B9B7E8441F51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97FEA8FC-C806-4CE3-9D06-B9B7E8441F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97FEA8FC-C806-4CE3-9D06-B9B7E8441F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97FEA8FC-C806-4CE3-9D06-B9B7E8441F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20535538-ADD6-4536-83B3-3EF809C83F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20535538-ADD6-4536-83B3-3EF809C83F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20535538-ADD6-4536-83B3-3EF809C83F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20535538-ADD6-4536-83B3-3EF809C83F57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{22951339-A0B1-4D8B-9555-2A1E72EA1075} = {9A3DF11A-23D7-4C43-AFB2-536B219B76CE}
+		{97FEA8FC-C806-4CE3-9D06-B9B7E8441F51} = {325979DE-2142-4422-8BF8-72BF0C035A75}
+		{20535538-ADD6-4536-83B3-3EF809C83F57} = {FE10F059-342A-4FCC-837A-A2A6E80A24E3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BAE742E3-E14B-447B-BB6E-ADA004DC0DFD}
+	EndGlobalSection
+EndGlobal

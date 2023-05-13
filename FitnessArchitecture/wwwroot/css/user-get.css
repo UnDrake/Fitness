@@ -1,0 +1,87 @@
+body {
+    background: #2059A8;
+}
+
+.box {
+    height: 500px;
+    width: 850px;
+    margin: 108px auto;
+    margin-bottom: 2.7rem;
+    background: #001b3e;
+    border-radius: 20px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+    .box .content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .box .page-name {
+            margin: 20px auto;
+            font-size: 17px;
+            text-align: center;
+            width: 130px;
+            padding: 10px 20px;
+            display: block;
+            background: linear-gradient(to right, #78F0DE, #3094FF);
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+        }
+
+        .box .content .form {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+            .box .content .form .input-field {
+                position: relative;
+                width: 300px;
+            }
+
+                .box .content .form .input-field input {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid rgba(255, 255, 255, 0.25);
+                    background-color: #001b3e;
+                    border-radius: 5px;
+                    outline: none;
+                    color: #fff;
+                    font-size: 1.5em;
+                }
+
+
+                .box .content .form .input-field span {
+                    position: absolute;
+                    left: 0;
+                    text-transform: uppercase;
+                }
+
+
+            .box .content .form input ~ span {
+                color: #00dfc4;
+                background: #001b3e;
+                transform: translateX(10px) translateY(-3px);
+                font-size: 0.85em;
+                padding: 0 10px;
+                border-left: 1px solid #00dfc4;
+                border-right: 1px solid #00dfc4;
+                letter-spacing: 0.2em;
+            }
+
+            .box .content .form .profile-btn {
+                font-size: 14px;
+                text-align: center;
+                width: 150px;
+                padding: 8px 16px;
+                display: block;
+                background: linear-gradient(to right, #78F0DE, #3094FF);
+                border-radius: 30px;
+                cursor: pointer;
+            }

@@ -1,0 +1,44 @@
+﻿@model List<ExerciseShortViewModel>
+
+
+@{
+    Layout = "_Layout";
+}
+
+<link rel="stylesheet" href="/css/product-exercise-list.css">
+
+
+<section class="model">
+
+    <h1 class="heading"><span>Exercise list</span> </h1>
+
+    <div class="box-container">
+
+        @{
+            foreach (ExerciseShortViewModel product in Model)
+            {
+                <div class="box">
+                    <div class="icons">
+                        <a asp-controller="ExerciseToList" asp-action="DeleteAdd" asp-route-id="@product.exerciseID" class="fas fa-minus"></a>
+                        <a asp-controller="Exercise" asp-action="GetExercise" asp-route-id="@product.exerciseID" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="@product.exerciseImg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>@product.exerciseName</h3>
+                        <div class="stars">
+                            <h5>Calories: @product.exerciseCalories</h5>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+</section>

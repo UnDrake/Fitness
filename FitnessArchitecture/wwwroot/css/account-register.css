@@ -1,0 +1,10 @@
+#btn {
+    top: -5px;
+    left: 120px; 
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #78F0DE, #3094FF);
+    transition: .5s;
+}

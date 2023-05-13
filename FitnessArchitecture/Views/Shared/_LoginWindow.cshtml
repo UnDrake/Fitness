@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="~/css/account-main.css" />
+	<title>Account</title>
+</head>
+
+<body>
+	<div class="hero">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<a asp-controller="Account" asp-action="Login" type="button" class="toggle-btn1">Entrance</a>
+				<a asp-controller="Account" asp-action="Register" type="button" class="toggle-btn2">Register</a>
+			</div>
+			@RenderBody()
+		</div>
+	</div>
+</body>
+</html>

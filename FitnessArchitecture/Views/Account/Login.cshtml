@@ -1,0 +1,16 @@
+﻿@model AccountLoginViewModel
+
+@{
+	Layout = "_LoginWindow";
+}
+
+<link rel="stylesheet" href="~/css/account-login.css" />
+
+
+<form asp-controller="Account" asp-action="Login" class="login-form">
+	<input asp-for="accountEmail" class="input-field" placeholder="Email" required />
+	<span asp-validation-for="accountEmail" style="color:red; font-size: 12px; "></span>
+	<input asp-for="accountPassword" type="password" class="input-field" placeholder="Password" required />
+	<span asp-validation-for="accountPassword" style="color:red; font-size: 12px; "></span>
+	<button type="submit" class="submit-btn-login">Login</button>
+</form>

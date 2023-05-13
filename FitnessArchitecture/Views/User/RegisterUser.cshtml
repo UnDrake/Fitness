@@ -1,0 +1,45 @@
+﻿@model UserViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/user-register.css" />
+    <title>Register Data</title>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="box">
+            <label type="text" class="page-name">User data</label>
+            <form asp-controller="User" asp-action="RegisterUser"  id="login" class="column">
+                <input asp-for="userName" class="input-field" placeholder="Name" required />
+                <input asp-for="userAge" class="input-field" placeholder="Age" required />
+                <span asp-validation-for="userAge" style="color:red; font-size: 12px; "></span>
+                <input asp-for="userWeight" class="input-field" placeholder="Weight" required />
+                <span asp-validation-for="userWeight" style="color:red; font-size: 12px; "></span>
+                <input asp-for="userHeight" class="input-field" placeholder="Height" required />
+                <span asp-validation-for="userHeight" style="color:red; font-size: 12px; "></span>
+                <select asp-for="userGender" class="select-field" required>
+                    <option value="" selected disabled hidden>Gender</option>
+                    <option value=0>Male</option>
+                    <option value=1>Female</option>
+                </select>
+                <select asp-for="userActivity" class="select-field" required>
+                    <option value="" selected disabled hidden>Activity</option>
+                    <option value=1>Minimal</option>
+                    <option value=2>Low</option>
+                    <option value=3>Average</option>
+                    <option value=4>High</option>
+                    <option value=5>Maximum</option>
+                </select>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

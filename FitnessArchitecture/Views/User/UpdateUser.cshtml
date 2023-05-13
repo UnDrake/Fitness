@@ -1,0 +1,55 @@
+﻿@model UserViewModel
+
+<link rel="stylesheet" href="/css/user-update.css" />
+
+
+<div class="form-box">
+    <label type="text" class="lbl-data">Update</label>
+    <div asp-validation-summary="All" style="font-size:12px; color:red; text-align:center" class="text-danger text-center"></div>
+
+    <div class="content">
+        <form asp-controller="User" asp-action="UpdateUser" id="form" class="input-group" method="post">
+            <div class="column">
+                <div class="input-field">
+                    <input asp-for="userName" placeholder="Name">
+                    <span>Name</span>
+                </div>
+                <div class="input-field">
+                    <input asp-for="userAge" placeholder="Age">
+                    <span>Age</span>
+                </div>
+                <div class="input-field">
+                    <input asp-for="userHeight" placeholder="Height">
+                    <span>Height</span>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="input-field">
+                    <input asp-for="userWeight" placeholder="Weight">
+                    <span>Weight</span>
+                </div>
+                <div class="input-field">
+                    <select asp-for="userGender" required>
+                        <option value="" selected disabled hidden>Gender</option>
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                    </select>
+                    <span>Gender</span>
+                </div>
+                <div class="input-field">
+                    <select asp-for="userActivity" required>
+                        <option value="" selected disabled hidden>Activity</option>
+                        <option value="1">Minimal</option>
+                        <option value="2">Low</option>
+                        <option value="3">Average</option>
+                        <option value="4">High</option>
+                        <option value="5">Maximum</option>
+                    </select>
+                    <span>Activity</span>
+                </div>
+            </div>
+            <button type="submit" class="save-btn">Save change</button>
+        </form>
+    </div>
+</div>

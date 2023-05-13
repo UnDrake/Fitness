@@ -1,0 +1,17 @@
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\bin\Debug\net6.0\FitnessArchitecture.DAL.deps.json
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\bin\Debug\net6.0\FitnessArchitecture.DAL.dll
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\bin\Debug\net6.0\FitnessArchitecture.DAL.pdb
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\bin\Debug\net6.0\FitnessArchitecture.Domain.dll
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\bin\Debug\net6.0\FitnessArchitecture.Domain.pdb
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\obj\Debug\net6.0\FitnessArchitecture.DAL.csproj.AssemblyReference.cache
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\obj\Debug\net6.0\FitnessArchitecture.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\obj\Debug\net6.0\FitnessArchitecture.DAL.AssemblyInfoInputs.cache
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\obj\Debug\net6.0\FitnessArchitecture.DAL.AssemblyInfo.cs
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\obj\Debug\net6.0\FitnessArchitecture.DAL.csproj.CoreCompileInputs.cache
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\obj\Debug\net6.0\FitnessArchitecture.DAL.csproj.CopyComplete
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\obj\Debug\net6.0\FitnessArchitecture.DAL.dll
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\obj\Debug\net6.0\refint\FitnessArchitecture.DAL.dll
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\obj\Debug\net6.0\FitnessArchitecture.DAL.pdb
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\obj\Debug\net6.0\ref\FitnessArchitecture.DAL.dll
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\bin\Debug\net6.0\FitnessArchitecture.DAL.runtimeconfig.json
+D:\Lessons\FitnessArchitecture\FitnessArchitecture.DAL\obj\Debug\net6.0\FitnessArchitecture.DAL.genruntimeconfig.cache

@@ -1,0 +1,43 @@
+﻿@model UserProfileViewModel
+
+<link rel="stylesheet" href="/css/user-get.css">
+
+<body>
+    <div class="box">
+        <label type="text" class="page-name">Profile</label>
+
+        <div class="content">
+            <form id="left-column" class="form">
+                <div class="input-field">
+                    <input disabled type="text" value=@Model.userName><span>Name</span>
+                </div>
+                <div class="input-field">
+                    <input disabled type="text" value=@Model.userEmail><span>Email</span>
+                </div>
+                <div class="input-field">
+                    <input disabled type="text" value=@Model.userNorm><span>Norm</span>
+                </div>
+                <button asp-controller="Account" asp-action="DeleteAccount" type="submit" class="profile-btn">Delete account</button>
+            </form>
+
+            <form id="right-column" class="form">
+                <div class="input-field">
+                    <input disabled type="text" value=@Model.userGender><span>Gender</span>
+                </div>
+                <div class="input-field">
+                    <input disabled type="text" value=@Model.userAge><span>Age</span>
+                </div>
+                <div class="input-field">
+                    <input disabled type="text" value=@Model.userHeight><span>Height</span>
+                </div>
+                <div class="input-field">
+                    <input disabled type="text" value=@Model.userWeight><span>Weight</span>
+                </div>
+                <div class="input-field">
+                    <input disabled type="text" value=@Model.userActivity><span>Activity</span>
+                </div>
+                <button asp-controller="User" asp-action="UpdateUser" type="submit" class="profile-btn">Change data</button>
+            </form>
+        </div>
+    </div>
+</body>
