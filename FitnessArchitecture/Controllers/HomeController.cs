@@ -14,6 +14,7 @@ namespace FitnessArchitecture.Controllers
 
 		[Authorize]
 		public IActionResult Index() => View();
+
         public IActionResult Error() => View();
     }
 }

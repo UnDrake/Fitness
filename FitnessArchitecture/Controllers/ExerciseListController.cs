@@ -1,5 +1,4 @@
-﻿using FitnessArchitecture.Service.Implementations;
-using FitnessArchitecture.Service.Interfaces;
+﻿using FitnessArchitecture.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FitnessArchitecture.Controllers

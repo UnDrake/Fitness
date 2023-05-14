@@ -27,7 +27,6 @@ namespace FitnessArchitecture.Controllers
             return View("Error");
         }
         
-
         public IActionResult GetProducts()
         {
             var products = productService.GetProducts();

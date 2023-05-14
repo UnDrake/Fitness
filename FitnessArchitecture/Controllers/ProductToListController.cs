@@ -1,5 +1,4 @@
 ﻿using FitnessArchitecture.Domain.Models;
-using FitnessArchitecture.Service.Implementations;
 using FitnessArchitecture.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,8 +12,7 @@ namespace FitnessArchitecture.Controllers
             this.addedProductService = addedProductService;
         }
 
-
-        public async Task<IActionResult> CreateAdd(int ID)
+        public async Task<IActionResult> AddProductToList(int ID)
         {
             var addProduct = new ProductToList()
             {
@@ -31,8 +29,7 @@ namespace FitnessArchitecture.Controllers
             return View("Error");
         }
 
-
-        public async Task<IActionResult> DeleteAdd(int ID)
+        public async Task<IActionResult> DeleteProductFromList(int ID)
         {
             var product = await addedProductService.Delete(ID);
             if (product.StatusCode == System.Net.HttpStatusCode.OK)

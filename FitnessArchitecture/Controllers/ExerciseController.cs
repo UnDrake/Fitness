@@ -16,7 +16,7 @@ namespace FitnessArchitecture.Controllers
         public async Task<IActionResult> GetExercise(int ID)
         {
             var exercise = await exerciseService.GetExercise(ID);
-            if (exercise.StatusCode == System.Net.HttpStatusCode.Created)
+            if (exercise.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 return View(exercise.Data);
             }
@@ -25,11 +25,10 @@ namespace FitnessArchitecture.Controllers
             return View("Error");
         }
 
-
         public IActionResult GetExercises()
         {
             var exercises = exerciseService.GetExercises();
-            if (exercises.StatusCode == System.Net.HttpStatusCode.Created)
+            if (exercises.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 return View(exercises.Data);
             }

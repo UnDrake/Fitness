@@ -21,11 +21,11 @@ namespace FitnessArchitecture.Controllers
 
 
 		[HttpPost]
-        public async Task<IActionResult> Register(AccountRegisterViewModel registerAccount)
+        public async Task<IActionResult> Register(AccountRegisterViewModel accountForRegistration)
 		{
 			if (ModelState.IsValid)
 			{
-				var account = await accountService.Register(registerAccount);
+				var account = await accountService.Register(accountForRegistration);
 
 				if (account.StatusCode == System.Net.HttpStatusCode.Created)
 				{
@@ -38,7 +38,7 @@ namespace FitnessArchitecture.Controllers
                 ViewBag.StatusCode = ((int)account.StatusCode);
                 return View("Error");
             }
-			return View(registerAccount);
+			return View(accountForRegistration);
 		}
 
 
@@ -46,11 +46,11 @@ namespace FitnessArchitecture.Controllers
 		public IActionResult Login() => View();
 
 		[HttpPost]
-		public async Task<IActionResult> Login(AccountLoginViewModel loginAccount)
+		public async Task<IActionResult> Login(AccountLoginViewModel accountForLogin)
 		{
 			if (ModelState.IsValid)
 			{
-				var account = await accountService.Login(loginAccount);
+				var account = await accountService.Login(accountForLogin);
 
 				if (account.StatusCode == System.Net.HttpStatusCode.OK)
 				{
@@ -63,16 +63,14 @@ namespace FitnessArchitecture.Controllers
 				ViewBag.StatusCode = ((int)account.StatusCode);
                 return View("Error");
             }
-            return View(loginAccount);
+            return View(accountForLogin);
 		}
-
 
         public async Task<IActionResult> LogOut()
 		{
 			await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 			return View("Login");
 		}
-
 
         public async Task<IActionResult> DeleteAccount(int ID)
 		{

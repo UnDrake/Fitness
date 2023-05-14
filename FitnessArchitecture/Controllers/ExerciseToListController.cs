@@ -13,17 +13,7 @@ namespace FitnessArchitecture.Controllers
             this.addedExerciseService = addedExerciseService;
         }
 
-
-        public async Task<IActionResult> Add(ExerciseToList addedExercise)
-        {
-            if (ModelState.IsValid)
-            {
-                await addedExerciseService.Create(addedExercise);
-            }
-            return RedirectToAction("Index", "Home");
-        }
-
-        public async Task<IActionResult> CreateAdd(int ID)
+        public async Task<IActionResult> AddExerciseToList(int ID)
         {
             var addExercise = new ExerciseToList()
             {
@@ -40,8 +30,7 @@ namespace FitnessArchitecture.Controllers
             return View("Error");
         }
 
-
-        public async Task<IActionResult> DeleteAdd(int ID)
+        public async Task<IActionResult> DeleteExerciseFromList(int ID)
         {
             var exercise = await addedExerciseService.Delete(ID);
             if (exercise.StatusCode == System.Net.HttpStatusCode.OK)

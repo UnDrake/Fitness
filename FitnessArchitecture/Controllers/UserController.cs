@@ -1,8 +1,6 @@
-﻿using FitnessArchitecture.Domain.Models;
-using FitnessArchitecture.Domain.ViewModels.User;
+﻿using FitnessArchitecture.Domain.ViewModels.User;
 using FitnessArchitecture.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-
 
 namespace FitnessArchitecture.Controllers
 {
@@ -14,7 +12,6 @@ namespace FitnessArchitecture.Controllers
 		{
 			this.userService = userService;
 		}
-
 
 		[HttpGet]
 		public IActionResult RegisterUser() =>	View();
@@ -37,7 +34,6 @@ namespace FitnessArchitecture.Controllers
 			}
 			return View(userInfo);
         }
-
 
 		[HttpGet]
 		public IActionResult UpdateUser() => View();
