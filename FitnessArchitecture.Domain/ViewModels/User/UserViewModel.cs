@@ -12,6 +12,7 @@ namespace FitnessArchitecture.Domain.ViewModels.User
         public string userName { get; set; }
 
         [Display(Name = "Age")]
+        [Range(1, 150, ErrorMessage = "Age must be between 1 and 150")]
         [Required(ErrorMessage = "Enter age")]
         public uint userAge { get; set; }
 

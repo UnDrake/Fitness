@@ -11,7 +11,6 @@ namespace FitnessArchitecture.Domain.Helpers
             {
                 var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
                 var hash = BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
-
                 return hash;
             }
         }

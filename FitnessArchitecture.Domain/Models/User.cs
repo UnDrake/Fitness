@@ -1,6 +1,5 @@
 ﻿using FitnessArchitecture.Domain.Enum;
 
-
 namespace FitnessArchitecture.Domain.Models
 {
 	public class User
