@@ -30,7 +30,6 @@ namespace FitnessArchitecture.DAL.Repositories
 			return addedExercise;
 		}
 
-
 		public IQueryable<ExerciseToList> GetAll()
 		{
 			return appDbContext.AddedExercises;

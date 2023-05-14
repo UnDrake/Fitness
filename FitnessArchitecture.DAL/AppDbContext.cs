@@ -20,7 +20,6 @@ namespace FitnessArchitecture.DAL
 		public DbSet<ProductList> ProductLists { get; set; }
 		public DbSet<ExerciseList> ExerciseLists { get; set; }
 
-
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.Entity<Account>(builder =>
@@ -41,7 +40,6 @@ namespace FitnessArchitecture.DAL
 				.OnDelete(DeleteBehavior.Cascade);
 			});
 
-
 			modelBuilder.Entity<User>(builder =>
 			{
 				builder.ToTable("Users").HasKey(u => u.userID);
@@ -49,38 +47,30 @@ namespace FitnessArchitecture.DAL
 				builder.Property(u => u.userID).ValueGeneratedOnAdd();
 			});
 
-
 			modelBuilder.Entity<Exercise>(builder =>
 			{
 				builder.ToTable("Exercises").HasKey(e => e.exerciseID);
-				//builder.Property(e => e.exerciseID).ValueGeneratedOnAdd();
 			});
-
 
 			modelBuilder.Entity<Product>(builder =>
 			{
 				builder.ToTable("Products").HasKey(p => p.productID);
-                //builder.Property(p => p.productID).ValueGeneratedOnAdd();
             });
-
 
 			modelBuilder.Entity<Sleep>(builder =>
 			{
 				builder.ToTable("Sleeps").HasKey(s => s.sleepID);
             });
 
-
 			modelBuilder.Entity<ExerciseList>(builder =>
 			{
 				builder.ToTable("ExerciseLists").HasKey(el => el.exerciseListID);
 			});
 
-
 			modelBuilder.Entity<ProductList>(builder =>
 			{
 				builder.ToTable("ProductLists").HasKey(pl => pl.productListID);
 			});
-
 
 			modelBuilder.Entity<ExerciseToList>(builder =>
 			{
@@ -88,7 +78,6 @@ namespace FitnessArchitecture.DAL
 				builder.HasOne(el => el.exerciseList).WithMany(ae => ae.addedExercises)
 				.HasForeignKey(k => k.exerciseListID);
 			});
-
 
 			modelBuilder.Entity<ProductToList>(builder =>
 			{

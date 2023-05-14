@@ -1,5 +1,4 @@
-﻿using FitnessArchitecture.Domain.Models;
-using FitnessArchitecture.Domain.Response;
+﻿using FitnessArchitecture.Domain.Response;
 using FitnessArchitecture.Domain.ViewModels.Sleep;
 
 namespace FitnessArchitecture.Service.Interfaces

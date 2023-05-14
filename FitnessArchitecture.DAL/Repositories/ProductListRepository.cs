@@ -1,7 +1,6 @@
 ﻿using FitnessArchitecture.DAL.Interfaces;
 using FitnessArchitecture.Domain.Models;
 
-
 namespace FitnessArchitecture.DAL.Repositories
 {
 	public class ProductListRepository : IBaseRepository<ProductList>

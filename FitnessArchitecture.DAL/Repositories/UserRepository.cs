@@ -23,7 +23,6 @@ namespace FitnessArchitecture.DAL.Repositories
 			await appDbContext.SaveChangesAsync();
 		}
 
-
 		public async Task<User> Update(User user)
 		{
 			appDbContext.Update(user);

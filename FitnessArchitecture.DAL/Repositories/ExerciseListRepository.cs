@@ -1,7 +1,5 @@
 ﻿using FitnessArchitecture.DAL.Interfaces;
 using FitnessArchitecture.Domain.Models;
-using Microsoft.EntityFrameworkCore;
-
 
 namespace FitnessArchitecture.DAL.Repositories
 {

@@ -18,7 +18,6 @@ namespace FitnessArchitecture.Service.Implementations
 			this.exerciseRepository = exerciseRepository;
 		}
 
-
 		public async Task<IBaseResponse<List<ExerciseShortViewModel>>> GetExercises(string accountEmail)
 		{
 			try
@@ -37,7 +36,7 @@ namespace FitnessArchitecture.Service.Implementations
 
 				var addedExercises = account.exerciseList?.addedExercises;
 
-                List<ExerciseShortViewModel> response = new List<ExerciseShortViewModel>();
+                List<ExerciseShortViewModel> exercises = new List<ExerciseShortViewModel>();
                 foreach (var ex in addedExercises)
 				{
                     var exercise = exerciseRepository.GetAll().Select(e => new ExerciseShortViewModel()
@@ -50,13 +49,13 @@ namespace FitnessArchitecture.Service.Implementations
 
                     if (exercise != null)
                     {
-                        response.Add(exercise);
+                        exercises.Add(exercise);
                     }
                 }
 
                 return new BaseResponse<List<ExerciseShortViewModel>>()
 				{
-					Data = response,
+					Data = exercises,
 					Description = "Exercises from the list have been successfully received",
 					StatusCode = System.Net.HttpStatusCode.OK,
 				};

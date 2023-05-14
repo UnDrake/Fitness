@@ -16,7 +16,6 @@ namespace FitnessArchitecture.Service.Implementations
             this.exerciseRepository = exerciseRepository;
         }
 
-
 		public async Task<IBaseResponse<ExerciseViewModel>> GetExercise(int ID)
 		{
 			try

@@ -18,7 +18,6 @@ namespace FitnessArchitecture.Service.Implementations
 			this.exerciseToListRepository = exerciseToListRepository;
 		}
 
-
 		public async Task<IBaseResponse<ExerciseToList>> Create(ExerciseToList exerciseToList)
 		{
 			try
@@ -62,7 +61,6 @@ namespace FitnessArchitecture.Service.Implementations
 				};
 			}
 		}
-
 
 		public async Task<IBaseResponse<bool>> Delete(int ID)
 		{

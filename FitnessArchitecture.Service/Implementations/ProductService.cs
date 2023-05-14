@@ -1,7 +1,6 @@
 ﻿using FitnessArchitecture.DAL.Interfaces;
 using FitnessArchitecture.Domain.Models;
 using FitnessArchitecture.Domain.Response;
-using FitnessArchitecture.Domain.ViewModels.Exercise;
 using FitnessArchitecture.Domain.ViewModels.Product;
 using FitnessArchitecture.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -16,7 +15,6 @@ namespace FitnessArchitecture.Service.Implementations
 		{
 			this.productRepository = productRepository;
 		}
-
 
 		public async Task<IBaseResponse<ProductViewModel>> GetProduct(int ID)
 		{

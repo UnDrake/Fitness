@@ -16,7 +16,6 @@ namespace FitnessArchitecture.Service.Implementations
 			this.sleepRepository = sleepRepository;
 		}
 
-
 		public async Task<IBaseResponse<SleepViewModel>> GetSleep(string accountEmail)
 		{
 			try
@@ -44,7 +43,6 @@ namespace FitnessArchitecture.Service.Implementations
                 };
 			}
 		}
-
 
 		public async Task<IBaseResponse<SleepViewModel>> Update(SleepViewModel updateSleep)
 		{

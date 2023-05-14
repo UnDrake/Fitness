@@ -1,5 +1,4 @@
-﻿using FitnessArchitecture.Domain.Models;
-using FitnessArchitecture.Domain.Response;
+﻿using FitnessArchitecture.Domain.Response;
 using FitnessArchitecture.Domain.ViewModels.Exercise;
 
 namespace FitnessArchitecture.Service.Interfaces

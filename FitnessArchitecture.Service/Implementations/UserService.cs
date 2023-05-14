@@ -17,7 +17,6 @@ namespace FitnessArchitecture.Service.Implementations
 			this.userRepository = userRepository;
 		}
 
-
 		public async Task<BaseResponse<UserProfileViewModel>> GetUser(string accountEmail)
 		{
 			try
@@ -54,13 +53,11 @@ namespace FitnessArchitecture.Service.Implementations
 			}
 		}
 
-
-		public async Task<BaseResponse<User>> UpdateUser(UserViewModel updateUser)
+		public async Task<BaseResponse<bool>> UpdateUser(UserViewModel updateUser)
 		{
 			try
 			{
 				var user = await userRepository.GetAll().FirstOrDefaultAsync(u => u.userID == updateUser.userID);
-				
 				user.userWeight = updateUser.userWeight;
 				user.userName = updateUser.userName;
 				user.userNorm = updateUser.userNorm;
@@ -69,19 +66,18 @@ namespace FitnessArchitecture.Service.Implementations
 				user.userAge = updateUser.userAge;
 				user.userActivity = updateUser.userActivity;
 				user.NormCalculation();
-
                 await userRepository.Update(user);
 
-				return new BaseResponse<User>()
+				return new BaseResponse<bool>()
 				{
-					Data = user,
+					Data = true,
 					Description = "User successful update",
                     StatusCode = System.Net.HttpStatusCode.OK
                 };
 			}
 			catch (Exception ex)
 			{
-				return new BaseResponse<User>()
+				return new BaseResponse<bool>()
 				{
 					Description = ex.Message,
                     StatusCode = System.Net.HttpStatusCode.InternalServerError

@@ -1,5 +1,4 @@
-﻿using FitnessArchitecture.Domain.Models;
-using FitnessArchitecture.Domain.Response;
+﻿using FitnessArchitecture.Domain.Response;
 using FitnessArchitecture.Domain.ViewModels.User;
 using System.Security.Claims;
 

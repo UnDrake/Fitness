@@ -1,5 +1,4 @@
-﻿using FitnessArchitecture.Domain.Models;
-using FitnessArchitecture.Service.Interfaces;
+﻿using FitnessArchitecture.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FitnessArchitecture.Controllers
@@ -17,7 +16,7 @@ namespace FitnessArchitecture.Controllers
         public async Task<IActionResult> GetExercise(int ID)
         {
             var exercise = await exerciseService.GetExercise(ID);
-            if (exercise.StatusCode == System.Net.HttpStatusCode.OK)
+            if (exercise.StatusCode == System.Net.HttpStatusCode.Created)
             {
                 return View(exercise.Data);
             }
@@ -30,7 +29,7 @@ namespace FitnessArchitecture.Controllers
         public IActionResult GetExercises()
         {
             var exercises = exerciseService.GetExercises();
-            if (exercises.StatusCode == System.Net.HttpStatusCode.OK)
+            if (exercises.StatusCode == System.Net.HttpStatusCode.Created)
             {
                 return View(exercises.Data);
             }

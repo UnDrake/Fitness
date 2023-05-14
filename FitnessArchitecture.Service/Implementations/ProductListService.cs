@@ -19,7 +19,6 @@ namespace FitnessArchitecture.Service.Implementations
 			this.productRepository = productRepository;
 		}
 
-
 		public async Task<IBaseResponse<List<ProductShortViewModel>>> GetProducts(string accountEmail)
 		{
 			try
@@ -38,7 +37,7 @@ namespace FitnessArchitecture.Service.Implementations
 
 				var addedProducts = account.productList?.addedProducts;
 
-				List<ProductShortViewModel> response = new List<ProductShortViewModel>();
+				List<ProductShortViewModel> products = new List<ProductShortViewModel>();
 				foreach (var pr in addedProducts)
 				{
 					var product = productRepository.GetAll().Select(p => new ProductShortViewModel()
@@ -50,13 +49,13 @@ namespace FitnessArchitecture.Service.Implementations
                     }).FirstOrDefault(p => p.productID == pr.productID);
 					if (product != null)
 					{
-                        response.Add(product);
+                        products.Add(product);
 					}
 				}
 
 				return new BaseResponse<List<ProductShortViewModel>>()
 				{
-					Data = response,
+					Data = products,
 					Description = "Products from the list have been successfully received",
 					StatusCode = System.Net.HttpStatusCode.OK,
 				};

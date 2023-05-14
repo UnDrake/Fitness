@@ -28,13 +28,45 @@ namespace FitnessArchitecture.Service.Implementations
 			this.sleepRepository = sleepRepository;
 		}
 
+		private async Task CreateEntitiesForAccount(Account account)
+		{
+            var user = new User()
+            {
+                userName = string.Empty,
+                userAge = 0,
+                userHeight = 0,
+                userWeight = 0,
+                userGender = 0,
+                userActivity = 0,
+                userNorm = 0,
+                accountID = account.accountID,
+            };
+            var productList = new ProductList()
+            {
+                accountID = account.accountID,
+            };
+            var exerciseList = new ExerciseList()
+            {
+                accountID = account.accountID,
+            };
+            var sleep = new Sleep()
+            {
+                accountID = account.accountID,
+                sleepAccountEmail = account.accountEmail,
+            };
 
-		public async Task<IBaseResponse<ClaimsIdentity>> Register(AccountRegisterViewModel registerAccount)
+            await userRepository.Create(user);
+            await productListRepository.Create(productList);
+            await exerciseListRepository.Create(exerciseList);
+            await sleepRepository.Create(sleep);
+        }
+
+        public async Task<IBaseResponse<ClaimsIdentity>> Register(AccountRegisterViewModel accountForRegistration)
 		{
 			try
 			{
 				var account = await accountRepository.GetAll().FirstOrDefaultAsync(
-					a => a.accountEmail == registerAccount.accountEmail);
+					a => a.accountEmail == accountForRegistration.accountEmail);
 
 				if (account != null)
 				{
@@ -47,52 +79,18 @@ namespace FitnessArchitecture.Service.Implementations
 
 				account = new Account()
 				{
-					accountEmail = registerAccount.accountEmail,
-					accountPassword = HashPasswordHelper.HashPassoword(registerAccount.accountPassword),
+					accountEmail = accountForRegistration.accountEmail,
+					accountPassword = HashPasswordHelper.HashPassoword(accountForRegistration.accountPassword),
 				};
-
 				await accountRepository.Create(account);
-
-                var user = new User()
-                {
-                    userName = string.Empty,
-                    userAge = 0,
-                    userHeight = 0,
-                    userWeight = 0,
-                    userGender = 0,
-                    userActivity = 0,
-                    userNorm = 0,
-                    accountID = account.accountID,
-                };
-
-				var productList = new ProductList()
-				{
-					accountID = account.accountID,
-				};
-
-				var exerciseList = new ExerciseList()
-				{
-					accountID = account.accountID,
-				};
-
-				var sleep = new Sleep()
-				{
-					accountID = account.accountID,
-                    sleepAccountEmail = account.accountEmail,
-                };
-
-				await userRepository.Create(user);
-				await productListRepository.Create(productList);
-				await exerciseListRepository.Create(exerciseList);
-				await sleepRepository.Create(sleep);
-
+                await CreateEntitiesForAccount(account);
 				var confirmedAccount = Authenticate(account);
 
 				return new BaseResponse<ClaimsIdentity>
 				{
 					Data = confirmedAccount,
 					Description = "Account created successfully",
-					StatusCode = System.Net.HttpStatusCode.OK,
+					StatusCode = System.Net.HttpStatusCode.Created,
 				};
 			}
 			catch (Exception ex)
@@ -105,13 +103,12 @@ namespace FitnessArchitecture.Service.Implementations
 			}
 		}
 
-
-		public async Task<IBaseResponse<ClaimsIdentity>> Login(AccountLoginViewModel loginAccount)
+		public async Task<IBaseResponse<ClaimsIdentity>> Login(AccountLoginViewModel accountForLogin)
 		{
 			try
 			{
 				var account = await accountRepository.GetAll().FirstOrDefaultAsync(
-					a => a.accountEmail == loginAccount.accountEmail);
+					a => a.accountEmail == accountForLogin.accountEmail);
 
 				if (account == null)
 				{
@@ -122,7 +119,7 @@ namespace FitnessArchitecture.Service.Implementations
                     };
 				}
 
-				if (account.accountPassword != HashPasswordHelper.HashPassoword(loginAccount.accountPassword))
+				if (account.accountPassword != HashPasswordHelper.HashPassoword(accountForLogin.accountPassword))
 				{
 					return new BaseResponse<ClaimsIdentity>
 					{
@@ -150,17 +147,14 @@ namespace FitnessArchitecture.Service.Implementations
 			}
 		}
 
-
 		private ClaimsIdentity Authenticate(Account account)
 		{
             var claims = new List<Claim>
 			{ 
 				new Claim(ClaimTypes.Name, account.accountEmail),
-				new Claim ("ID", account.accountID.ToString()),
             };
 			return new ClaimsIdentity(claims, "Cookies");
 		}
-
 
 		public async Task<IBaseResponse<bool>> DeleteAccount(int ID)
 		{

@@ -27,7 +27,7 @@ namespace FitnessArchitecture.Controllers
 			{
 				var account = await accountService.Register(registerAccount);
 
-				if (account.StatusCode == System.Net.HttpStatusCode.OK)
+				if (account.StatusCode == System.Net.HttpStatusCode.Created)
 				{
 					await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
 						new ClaimsPrincipal(account.Data));
