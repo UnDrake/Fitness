@@ -19,7 +19,7 @@
         </div>
         <div class="options">
             <div class="icons">
-                <img id="ic" src="~/images/sleep-index.png">
+                <img src="~/images/sleep-index.png">
             </div>
             <div class="btns">
                 <label for="chkBox" class="sleep">My sleep</label>
@@ -30,13 +30,13 @@
 
 
 <div class="form-box">
-    <input type="checkbox" id="chkBox">
+    <input type="checkbox" id="check-box">
     <div class="form-content">
         <form asp-controller="Sleep" asp-action="UpdateSleep" id="form" class="box">
             <label type="text" class="lbl-data">Your sleep</label>
             <span asp-validation-for="@Model.sleepTime" style="font-size:12px; color:red; margin-left:150px"></span>
             <div class="login-form">
-                <div class="inputBox">
+                <div class="data-box">
                     <input asp-for="@Model.sleepTime" type="number" placeholder="Sleep Amount">
                     @{
                         Model.sleepAccountEmail = User.Identity.Name;

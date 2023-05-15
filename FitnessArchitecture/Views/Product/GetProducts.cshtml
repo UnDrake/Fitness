@@ -1,6 +1,5 @@
 ﻿@model List<ProductShortViewModel>
 
-
 @{
     Layout = "_Layout";
 }
@@ -9,11 +8,8 @@
 
 
 <section class="model">
-
     <h1 class="heading"><span>Product list</span> </h1>
-
     <div class="box-container">
-
         @{
             foreach (ProductShortViewModel product in Model)
             {
@@ -40,5 +36,4 @@
             }
         }
     </div>
-
 </section>

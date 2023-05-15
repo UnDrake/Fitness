@@ -4,7 +4,6 @@
 
 <div class="content">
     <section class="index">
-
         <div class="description">
             <h3>Nutrition</h3>
             <p>
@@ -16,13 +15,13 @@
             </p>
         </div>
         <div class="options">
-            <div class="carts">
-                <img id="cart1" src="~/images/product-cart-1.png" alt="1st image">
-                <img id="cart2" src="~/images/product-cart-2.png" alt="2nd image">
+            <div class="list-imgs">
+                <img src="~/images/product-cart-1.png" alt="Product cart image">
+                <img src="~/images/product-cart-2.png" alt="My product cart image">
             </div>
             <div class="btns">
-                <a asp-controller="Product" asp-action="GetProducts" class="product1">Grocery list</a>
-                <a asp-controller="ProductList" asp-action="GetProducts" class="product2">My Products</a>
+                <a asp-controller="Product" asp-action="GetProducts" class="all-elements-list-btn">Grocery list</a>
+                <a asp-controller="ProductList" asp-action="GetProducts" class="my-elements-list-btn">My Products</a>
             </div>
         </div>
     </section>

@@ -1,5 +1,4 @@
-﻿using FitnessArchitecture.Controllers;
-using FitnessArchitecture.DAL;
+﻿using FitnessArchitecture.DAL;
 using FitnessArchitecture.DAL.Interfaces;
 using FitnessArchitecture.DAL.Repositories;
 using FitnessArchitecture.Domain.Models;
@@ -7,7 +6,6 @@ using FitnessArchitecture.Service.Implementations;
 using FitnessArchitecture.Service.Interfaces;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 namespace FitnessArchitecture
 {
@@ -47,16 +45,13 @@ namespace FitnessArchitecture
             services.AddScoped<IExerciseToListService, ExerciseToListService>();
             services.AddScoped<IProductToListService, ProductToListService>();
 
-
 			services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 				.AddCookie(options => {
 					options.LoginPath = "/Account/Login";
                     options.AccessDeniedPath = "/Home/Error";
                 });
-			
 
             services.AddMvc(options => options.EnableEndpointRouting = false);
-
 			services.AddMemoryCache();
 			services.AddSession();
 		}
@@ -65,7 +60,6 @@ namespace FitnessArchitecture
 		{
 			app.UseAuthentication();
 			app.UseAuthorization();
-
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseHttpsRedirection();
@@ -74,15 +68,11 @@ namespace FitnessArchitecture
 			app.UseStatusCodePages();
 			app.UseStaticFiles();
 			app.UseSession();
-
-
 			app.UseMvc(routes =>
 			{
 				routes.MapRoute(name: "default",
 				template: "{controller=Account}/{action=Login}/{id?}");
 			});
-
-
 		}
 	}
 }

@@ -7,30 +7,24 @@
 <link rel="stylesheet" href="/css/product-exercise-get.css">
 
 
-
 <div class="form-box">
     <label type="text" class="name">@Model.exerciseName</label>
-
     <div class="content">
-        <form asp-controller="Exercise" asp-action="Index" id="form" class="input-group">
+        <form asp-controller="Exercise" asp-action="Index" class="input-group">
             <div class="column1">
                 <img src="@Model.exerciseImg" alt="">
             </div>
-
-
             <div class="column2">
-                <div class="inputBox">
+                <div class="data-box">
                     <input disabled type="text" placeholder="@Model.exerciseCalories">
                     <span>Calories</span>
                 </div>
-                <div class="inputBox">
+                <div class="data-box">
                     <textarea disabled>@Model.exerciseLongDescription</textarea>
                     <span>Description</span>
                 </div>
             </div>
-
             <button type="submit" class="back-btn">Back</button>
         </form>
-
     </div>
 </div>

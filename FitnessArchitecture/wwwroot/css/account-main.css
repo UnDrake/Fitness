@@ -88,7 +88,7 @@
             background: transparent;
         }
 
-        .hero .form-box form .submit-btn-login {
+        .hero .form-box form .login-submit-btn {
             width: 85%;
             padding: 10px 30px;
             cursor: pointer;
@@ -100,7 +100,7 @@
             border-radius: 30px;
         }
 
-        .hero .form-box form .submit-btn-register {
+        .hero .form-box form .register-submit-btn {
             width: 85%;
             padding: 10px 30px;
             cursor: pointer;

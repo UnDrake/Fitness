@@ -1,9 +1,9 @@
-#ic {
+.icons img {
     width: 300px;
     padding: 20px;
 }
 
-.sleep {
+.btns .sleep {
     background: none;
     text-decoration: none;
     border: 2px solid var(--main-color);

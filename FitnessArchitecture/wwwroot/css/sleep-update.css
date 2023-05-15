@@ -1,4 +1,4 @@
-#chkBox {
+#check-box {
     display: none;
 }
 
@@ -37,13 +37,13 @@
             border-radius: 30px;
         }
 
-        .form-content .box .inputBox {
+        .form-content .box .data-box {
             position: relative;
             width: 300px;
             margin: 30px 100px 0 100px;
         }
 
-            .form-content .box .inputBox input {
+            .form-content .box .data-box input {
                 width: 100%;
                 padding: 10px;
                 border: 1px solid rgba(255, 255, 255, 0.25);
@@ -54,7 +54,7 @@
                 font-size: 1.5em;
             }
 
-            .form-content .box .inputBox span {
+            .form-content .box .data-box span {
                 position: absolute;
                 left: 0;
                 text-transform: uppercase;
@@ -98,11 +98,11 @@
             }
 
 
-#chkBox:checked + .form-content {
+#check-box:checked + .form-content {
     visibility: visible;
     opacity: 1;
 }
 
-    #chkBox:checked + .form-content .box {
+    #check-box:checked + .form-content .box {
         transform: translateY(0);
     }
