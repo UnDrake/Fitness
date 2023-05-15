@@ -22,7 +22,6 @@ namespace FitnessArchitecture
 		{
 			services.AddDbContext<AppDbContext>(options => options.UseSqlServer(_confString.GetConnectionString("DefaultConnection")));
 			services.AddAuthorization();
-
 			services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 			services.AddScoped<IBaseRepository<User>, UserRepository>();
